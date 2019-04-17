@@ -3,16 +3,17 @@
 
 a = Time.now.to_f
 
+
 (1..100).each do |num|
-  if (num % 3 == 0) && (num % 5 == 0)
-    puts "FizzBuzz"
-  elsif num % 3 == 0
-    puts "Fizz"
-  elsif num % 5 == 0
-    puts "Buzz"
-  else
-    puts num
+  string = ""
+  string += "Fizz" if num % 3 == 0
+  string += "Buzz" if num % 5 == 0
+
+  if string == ""
+    string = num
   end
+
+  puts string
 end
 
 puts a
