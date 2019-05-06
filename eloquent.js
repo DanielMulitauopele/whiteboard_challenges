@@ -10,7 +10,7 @@ const min = (num1, num2) => {
 
 console.log(min(7, 5))
 
-// Recursion Function
+// Recursion function
 
 const isEven = (input) => {
   if (input == 0) {
@@ -22,4 +22,22 @@ const isEven = (input) => {
   }
 }
 
-isEven(8)
+isEven(50)
+
+// Counting function
+
+const countBs = (string) => {
+  return countChar(string, "B");
+}
+
+const countChar = (string, char) => {
+  counter = 0;
+  for (i = 0; i < string.length - 1; i++) {
+    if (string[i] == char) {
+      counter += 1
+    }
+  }
+  return counter;
+}
+
+console.log(countBs("BaBaygotback"))
